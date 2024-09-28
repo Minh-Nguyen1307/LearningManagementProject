@@ -1,14 +1,13 @@
-#root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: 'Roboto', sans-serif;
 max-width: 1440px;
-height: 2000px;
-
 
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
