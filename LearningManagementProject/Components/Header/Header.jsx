@@ -5,9 +5,10 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import {faSun} from '@fortawesome/free-solid-svg-icons'
+import './Header.css'
 export default function Header() {
   return (
-    <div className='h-16 d-flex justify-content-around align-items-center bg-sky-950 '>
+    <div className='h-16 d-flex justify-content-around align-items-center'>
         <div className=''>
         <Link to="/"><img src="./public/Byway.png" alt="logoByway" /></Link>
         </div>
@@ -29,9 +30,9 @@ export default function Header() {
               <span className="ball"></span>
         </div>
         <div className=''>
-            <span><FontAwesomeIcon icon={faCartShopping}/></span>
-            <button className='logIn'>Log in</button>
-            <button className='signIn'>Sign up</button>
+            <Link to =""><FontAwesomeIcon icon={faCartShopping}/></Link>
+            <Link to =""><button className='logIn'>Log in</button></Link>
+            <Link to =""><button className='signIn'>Sign up</button></Link>
         </div>
     </div>
     
