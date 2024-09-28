@@ -10,7 +10,8 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='w'>
+    
       <Router>
       <Routes>
         <Route path="/" element={
@@ -20,7 +21,7 @@ function App() {
 }/>
       </Routes>
     </Router>
-    </>
+    </div>
   )
 }
 
