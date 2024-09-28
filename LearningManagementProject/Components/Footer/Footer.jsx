@@ -11,13 +11,13 @@ export default function Footer() {
                 <p>Byway is a leading online learning platform dedicated to providing high-quality, flexible, and affordable educational experiences.</p>
             </div>
             <div className="">
-                <h3 className='text-xl font-semibold text-white'>Get Help</h3>
+                <h3 className='text-2xl font-semibold text-white'>Get Help</h3>
                 <p>Contact Us</p>
                 <p>Latest Articles</p>
                 <p>FAQ</p>
             </div>
             <div className="">
-                <h3 className='text-xl font-semibold text-white'>Programs</h3>
+                <h3 className='text-2xl font-semibold text-white'>Programs</h3>
                 <p>Art & Design</p>
                 <p>Business</p>
                 <p>IT & Software</p>
@@ -25,7 +25,7 @@ export default function Footer() {
                 <p>Programming</p>
             </div>
             <div className="">
-                <h3 className='text-xl font-semibold text-white'>Contact Us</h3>
+                <h3 className='text-2xl font-semibold text-white'>Contact Us</h3>
                 <p>Address: 123 Main Street, Anytown, CA12345</p>
                 <p>Tel: +(123)456-7890</p>
                 <p>Mail: bywayedu@webkul.in</p>

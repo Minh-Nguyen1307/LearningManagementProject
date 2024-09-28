@@ -6,7 +6,7 @@ import Carousel from '../Components/HomeSlide/Carousel'
 
 export default function HomePage() {
   return (
-    <div>
+    <div className='text-xl'>
         <Header />
         <Carousel />
         <Footer />

@@ -8,7 +8,7 @@ import {faSun} from '@fortawesome/free-solid-svg-icons'
 
 export default function Header() {
   return (
-    <div className=' bg-slate-50'>
+    <div className=' bg-slate-50 text-2xl'>
     <div className='mx-10 d-flex justify-between items-center h-20 font-normal'>
         <div className=''>
         <Link to="/"><img src="./public/BYWAY1.png" alt="logoByway" className='w-32'/></Link>
@@ -31,7 +31,7 @@ export default function Header() {
               <span className="bg-white w-6 h-6 absolute rounded-full transform peer-checked:translate-x-6 "></span>
             </div>
         </div>
-        <div className='w-44 d-flex justify-around items-center'>
+        <div className='w-60 d-flex justify-around items-center'>
             <Link to =""><FontAwesomeIcon icon={faCartShopping} className='text-xl'/></Link>
             <Link to =""><button className='border p-2'>Log in</button></Link>
             <Link to =""><button className='border bg-emerald-800 p-2'>Sign up</button></Link>
