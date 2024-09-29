@@ -3,8 +3,10 @@ import ListCategories from './ListCategories/ListCategories'
 import { faMicroscope, faWindowMaximize, faCreditCard, faAtom } from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuidv4 } from 'uuid';
 
-const uniqueId = uuidv4();
+import { v4 as uuidv4 } from 'uuid';
 
+const uniqueId = uuidv4();
+console.log(uniqueId); // Prints a unique UUID like "fdd60ef4-ff1f-4c64-b84d-67e3ff2b3f08"
 
 
 
