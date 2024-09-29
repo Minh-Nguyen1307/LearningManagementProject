@@ -3,11 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Category = (props) => {
     const { iconCategory, nameCategory, numberCategory}  = props;
   return (
-    <div className='d-flex flex-column items-center justify-around w-1/5 h-96 border-2 rounded-3xl'>
-        <div className='w-40 h-24'>
-            <FontAwesomeIcon icon={iconCategory} className='text-6xl h-44 w-56 bg-blue-800' />
+    <div className='d-flex flex-column items-center justify-around w-1/5 h-96 border-4 rounded-3xl'>
+        
+        <div className='w-40 h-40  bg-blue-200 rounded-full d-flex items-center justify-center'>
+            <FontAwesomeIcon icon={iconCategory} className='h-14 text-blue-600' />
         </div>
-        <h6>{nameCategory}</h6>
+        <h6 className='text-3xl font-semibold text-gray-800'>{nameCategory}</h6>
         <p>{numberCategory}</p>
     </div>
   )
