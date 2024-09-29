@@ -6,6 +6,7 @@ import Carousel from '../Components/HomeSlide/Carousel'
 import HomeCategories from '../Components/HomeCategories/HomeCategories'
 import HomeStatus from '../Components/HomeStatus/HomeStatus'
 import HomeCourses from '../Components/HomeCourses/HomeCourses'
+import HomeInstructor from '../Components/HomeInstructors/HomeInstructor'
 
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
         <HomeStatus />
         <HomeCategories />
         <HomeCourses />
+        <HomeInstructor />
         <Footer />
     </div>
   )
