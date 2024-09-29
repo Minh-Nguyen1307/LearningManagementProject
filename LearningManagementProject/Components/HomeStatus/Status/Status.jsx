@@ -2,13 +2,13 @@ import React from 'react'
 
 
 const Status = (props) => {
-    const {numberStat, describeStat} = props;
+    const {numberStatus, describeStatus} = props;
 
 
   return (
-    <div className=''>
-        <h3>{numberStat}</h3>
-        <p>{describeStat}</p>
+    <div className='d-flex flex-column justify-center items-center gap-3 w-1/4 border-l-4 border-r-4'>
+        <h3 className='text-4xl font-semibold text-gray-800'>{numberStatus}</h3>
+        <p>{describeStatus}</p>
     </div>
   )
 }

@@ -1,38 +1,35 @@
 import React, { useState } from 'react'
 import ListCategories from './ListCategories/ListCategories'
 import { faMicroscope, faWindowMaximize, faCreditCard, faAtom } from '@fortawesome/free-solid-svg-icons';
-
-
-
-
-
-
+import {v4 as uuidv4} from 'uuid'
 const category = [
     {
-        id: 1,
+        id: uuidv4(),
         iconCategory: faMicroscope,
         nameCategory: "Astrology",
         numberCategory: "11 Courses",
     },
     {
-        id: 2,
+        id: uuidv4(),
         iconCategory: faWindowMaximize,
         nameCategory: "Development",
         numberCategory: "12 Courses",
     },
     {
-        id: 3,
+        id: uuidv4(),
         iconCategory: faCreditCard,
         nameCategory: "Marketing",
         numberCategory: "13 Courses",
     },
     {
-        id: 4,
+        id: uuidv4(),
         iconCategory: faAtom,
         nameCategory: "Physics",
         numberCategory: "14 Courses",
     }
+       
 ]
+
 const HomeCategories = () => {
     const [categories, setCategories] = useState(category)
     

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const ListCategories =(props) => {
     const {categories =[]} = props;
 
-  const listCategory = categories.map((category) => (
+  const listCategory = categories && categories.map((category) => (
   <Category
     key={category.id}
     iconCategory={category.iconCategory}
