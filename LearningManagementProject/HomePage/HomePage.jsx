@@ -7,6 +7,8 @@ import HomeCategories from '../Components/HomeCategories/HomeCategories'
 import HomeStatus from '../Components/HomeStatus/HomeStatus'
 import HomeCourses from '../Components/HomeCourses/HomeCourses'
 import HomeInstructor from '../Components/HomeInstructors/HomeInstructor'
+import HomeBanner from '../Components/HomeBanner/HomeBanner'
+import HomeComments from '../Components/HomeComments/HomeComments'
 
 
 export default function HomePage() {
@@ -19,6 +21,8 @@ export default function HomePage() {
         <HomeCategories />
         <HomeCourses />
         <HomeInstructor />
+        <HomeComments />
+        <HomeBanner />
         <Footer />
     </div>
   )
