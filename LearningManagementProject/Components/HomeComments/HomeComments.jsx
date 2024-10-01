@@ -5,46 +5,46 @@ const comment = [{
     id: uuidv4(),
     
     commentText:"Great service, highly recommend",
-    avatar:'',
-    commentName:'',
-    commentJob:'',
+    avatar:'./public/avatar.png',
+    commentName:'Jane Doe',
+    commentJob:'Designer',
 },
 {   id: uuidv4(),
     
-    commentText:"Great service2, highly recommend",
-    avatar:'',
-    commentName:'',
-    commentJob:'',
+    commentText:"Byway's tech courses are top-notch",
+    avatar:'./public/avatar.png',
+    commentName:'Jax',
+    commentJob:'Developer',
 
 },
 {   id: uuidv4(),
     
-    commentText:"Great service3, highly recommend",
-    avatar:'',
-    commentName:'',
-    commentJob:'',
+    commentText:"As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. ",
+    avatar:'./public/avatar.png',
+    commentName:'Mike',
+    commentJob:'Engineer',
 
 },
 {   id: uuidv4(),
     
-    commentText:"Great service4, highly recommend",
-    avatar:'',
-    commentName:'',
-    commentJob:'',
+    commentText:"As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia. ",
+    avatar:'./public/avatar.png',
+    commentName:'John',
+    commentJob:'Witch',
 
 },
 {   id: uuidv4(),
     
-    commentText:"Great service5, highly recommend",
-    avatar:'',
-    commentName:'',
-    commentJob:'',
+    commentText:"Great service, highly recommend",
+    avatar:'./public/avatar.png',
+    commentName:'Hanna',
+    commentJob:'Catwalk',
 
 },
 {   id: uuidv4(),
    
-    commentText:"Great service6, highly recommend",
-    avatar:'',
+    commentText:"As someone who's always looking to stay ahead in the rapidly evolving tech world",
+    avatar:'./public/avatar.png',
     commentName:'',
     commentJob:'',
 
@@ -52,7 +52,7 @@ const comment = [{
 {   id: uuidv4(),
     
     commentText:"Great service7, highly recommend",
-    avatar:'',
+    avatar:'./public/avatar.png',
     commentName:'',
     commentJob:'',
 
@@ -60,7 +60,7 @@ const comment = [{
 {   id: uuidv4(),
     
     commentText:"Great service8, highly recommend",
-    avatar:'',
+    avatar:'./public/avatar.png',
     commentName:'',
     commentJob:'',
 
@@ -68,7 +68,7 @@ const comment = [{
 {   id: uuidv4(),
     
     commentText:"Great service9, highly recommend",
-    avatar:'',
+    avatar:'./public/avatar.png',
     commentName:'',
     commentJob:'',
 
@@ -76,7 +76,7 @@ const comment = [{
 {   id: uuidv4(),
     
     commentText:"Great service10, highly recommend",
-    avatar:'',
+    avatar:'./public/avatar.png',
     commentName:'',
     commentJob:'',
 

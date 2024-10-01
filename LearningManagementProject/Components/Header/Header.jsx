@@ -33,8 +33,8 @@ export default function Header() {
         </div>
         <div className='w-60 d-flex justify-around items-center'>
             <Link to =""><FontAwesomeIcon icon={faCartShopping} className='text-xl'/></Link>
-            <Link to =""><button className='border p-2'>Log in</button></Link>
-            <Link to =""><button className='border bg-emerald-800 p-2'>Sign up</button></Link>
+            <Link to =""><button className='btn btn-light border p-2'>Log in</button></Link>
+            <Link to ="/SignUp"><button className='btn btn-success border bg-emerald-800 p-2'>Sign up</button></Link>
         </div>
     </div>
     </div>

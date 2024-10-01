@@ -15,7 +15,6 @@ export default function HomePage() {
   return (
     <div className='text-xl'>
         <Header />
-        
         <Carousel />
         <HomeStatus />
         <HomeCategories />
