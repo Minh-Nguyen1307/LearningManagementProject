@@ -1,5 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const Comment=(props) => {
     const {commentText,avatar,commentJob,commentName} = props;
   return (

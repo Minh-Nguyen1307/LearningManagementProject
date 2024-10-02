@@ -1,7 +1,7 @@
 import React from 'react'
 import Comment from '../Comment/Comment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
+import {faArrowRight, faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 
 
 
