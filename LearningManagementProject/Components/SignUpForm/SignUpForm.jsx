@@ -1,9 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './SignUpForm.css'
-export default function SignUpForm() {
-    
+const SignUpForm = () => {
+  const [formValues, setFormValue] = useState( {
+    firstName: '',
+    lastName:'',
+    email:'',
+    useName:'',
+  });
+  
+  
+  const handleOnChange = (event) => {
+    const {value} = event.target;
+    setFirstName(value);
+  } 
+  const {firstName, lastName, email, useName} = formValues;
   return (
         <div className="row no-gutters">
           <div className="col-12 col-sm-6 col-md-8 d-flex flex-col items-center">
@@ -11,7 +23,7 @@ export default function SignUpForm() {
             <form className='d-flex flex-col justify-around item h-[500px] w-[500px]'>
               <div>
                 <p className="text-gray-950 font-medium text-xl my-2">Full Name</p>
-                <input type="text" placeholder="First Name" className="border rounded-md pl-4 w-1/2 h-9" />
+                <input type="text" placeholder="First Name" className="border rounded-md pl-4 w-1/2 h-9" onChange={handleOnChange} value = {} />
                 <input type="text" placeholder="Last Name" className="border rounded-md pl-4 w-1/2 h-9 " />
               </div>
     
@@ -36,7 +48,7 @@ export default function SignUpForm() {
               </div>
 
     
-              <button type="submit" className="btn btn-dark mt-4 text-2xl">
+              <button type="submit" className="btn btn-dark mt-4 text-xl">
                 Create Account <FontAwesomeIcon icon={faArrowRight} className="h-6" />
               </button>
             </form>
@@ -58,4 +70,4 @@ export default function SignUpForm() {
         </div>
       );
     }
-    
+    export default SignUpForm;

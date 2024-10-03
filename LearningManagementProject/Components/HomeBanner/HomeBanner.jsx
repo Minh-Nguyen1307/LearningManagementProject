@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 export default function HomeBanner() {
   return (
-    <div className='my-5'>
+    <div className='my-20'>
         <div className='d-flex justify-around items-center '>
             <div className=''>
                 <img src="./public/banner41.png" alt="" className='w-96'/>
