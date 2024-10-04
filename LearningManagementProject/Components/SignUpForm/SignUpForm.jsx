@@ -23,7 +23,7 @@ const SignUpForm = () => {
             <form className='d-flex flex-col justify-around item h-[500px] w-[500px]'>
               <div>
                 <p className="text-gray-950 font-medium text-xl my-2">Full Name</p>
-                <input type="text" placeholder="First Name" className="border rounded-md pl-4 w-1/2 h-9" onChange={handleOnChange} value = {} />
+                <input type="text" placeholder="First Name" className="border rounded-md pl-4 w-1/2 h-9" onChange={handleOnChange} value = {value} />
                 <input type="text" placeholder="Last Name" className="border rounded-md pl-4 w-1/2 h-9 " />
               </div>
     
