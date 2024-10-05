@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './LogInForm.css';
-
+import { Link, useNavigate } from 'react-router-dom';
 
 const LogInForm = () => {
   const [formValues, setFormValues] = useState({
@@ -11,6 +11,7 @@ const LogInForm = () => {
   });
 
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleOnChange = (e) => {
     const { name, value } = e.target;
@@ -29,8 +30,10 @@ const LogInForm = () => {
     );
 
     if (matchingUser) {
+      // Store user data in localStorage or context (if needed)
+      localStorage.setItem('loggedInUser', JSON.stringify(matchingUser)); // Save user data for session
       alert('Successfully logged in!');
-      
+      navigate('/'); // Redirect to the homepage
     } else {
       setError('Incorrect email or password.');
     }
@@ -76,14 +79,13 @@ const LogInForm = () => {
           </button>
         </form>
         <div className='text-center my-4'>
-              ----------------------Sign in with ----------------------
-              <div className='d-flex justify-between my-3 w-[500px]'>
-                <button className='btn btn-light'><img src="./public/1.png" alt="" className='' /></button>
-                <button className='btn btn-light mx-5'><img src="./public/2.png" alt="" className='' /></button>
-                <button className='btn btn-light'><img src="./public/3.png" alt="" className='' /></button>
-              </div>
-
-            </div>
+          ----------------------Sign in with ----------------------
+          <div className='d-flex justify-between my-3 w-[500px]'>
+            <button className='btn btn-light'><img src="./public/1.png" alt="" className='' /></button>
+            <button className='btn btn-light mx-5'><img src="./public/2.png" alt="" className='' /></button>
+            <button className='btn btn-light'><img src="./public/3.png" alt="" className='' /></button>
+          </div>
+        </div>
       </div>
 
       <div className="col-6 col-md-4 p-0">
