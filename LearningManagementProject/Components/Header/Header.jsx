@@ -58,7 +58,7 @@ const Header = () => {
         </div>
         <form className='border border-black w-2/5 h-1/2 rounded-lg d-flex justify-start '>
           <button type='submit'><FontAwesomeIcon icon={faMagnifyingGlass} className='ml-2' /></button>
-          <input type="search" placeholder='Search courses' className='w-11/12 border-none focus:outline-none p-2 bg-slate-50' />
+          <input type="search" placeholder='Search Courses' className='w-11/12 border-none focus:outline-none p-2 bg-slate-50' />
         </form>
         <div>
           <Link to="/">Teach on Byway</Link>
