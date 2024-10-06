@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './LogInForm.css';
+
 import { Link, useNavigate } from 'react-router-dom';
 
 const LogInForm = () => {
@@ -75,7 +75,7 @@ const LogInForm = () => {
           {error && <p className="text-red-500 text-sm">{error}</p>}
 
           <button type="submit" className="btn btn-dark mt-4 text-xl my-4">
-            Log In <FontAwesomeIcon icon={faArrowRight} className="h-6" />
+            Log In <FontAwesomeIcon icon={faArrowRight} className="h-4" />
           </button>
         </form>
         <div className='text-center my-4'>

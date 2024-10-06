@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './SignUpForm.css';
+import { useNavigate } from 'react-router-dom'; // Use useNavigate for navigation
 import { v4 as uuidv4 } from 'uuid';
 
 const SignUpForm = () => {
-  const [members, setMembers] = useState([]);
+  const navigate = useNavigate(); // Initialize useNavigate
   const [errors, setErrors] = useState({
     password: '',
     confirmPassword: '',
@@ -29,69 +29,60 @@ const SignUpForm = () => {
     return hasUpperCase && hasLowerCase && hasSpecialSymbol;
   };
 
+  // Function to validate the form
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = { ...errors };
+
+    if (!validatePassword(formValues.passWord)) {
+      newErrors.password = 'Password must contain an uppercase letter, a lowercase letter, and a special character.';
+      isValid = false;
+    }
+
+    if (formValues.passWord !== formValues.confirmPassword) {
+      newErrors.confirmPassword = 'Passwords do not match.';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
   const handleOnChange = (e) => {
     const { value, name } = e.target;
     setFormValues({ ...formValues, [name]: value });
 
-    // Validate passwords on the fly and remove errors if valid
-    if (name === 'passWord') {
-      if (validatePassword(value)) {
-        setErrors((prevErrors) => ({ ...prevErrors, password: '' })); // Clear password error when valid
-      } else {
-        setErrors((prevErrors) => ({
-          ...prevErrors,
-          password: 'Password must contain an uppercase letter, a lowercase letter, and a special character.',
-        }));
-      }
-    }
-
-    if (name === 'confirmPassword') {
-      if (value === formValues.passWord) {
-        setErrors((prevErrors) => ({ ...prevErrors, confirmPassword: '' })); // Clear confirm password error when matching
-      } else {
-        setErrors((prevErrors) => ({
-          ...prevErrors,
-          confirmPassword: 'Passwords do not match.',
-        }));
-      }
+    if (name === 'passWord' || name === 'confirmPassword') {
+      validateForm();
     }
   };
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
-    
-    // Re-validate passwords on submit
-    if (!validatePassword(formValues.passWord)) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        password: 'Password must contain an uppercase letter, a lowercase letter, and a special character.',
-      }));
-    }
 
-    if (formValues.passWord !== formValues.confirmPassword) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        confirmPassword: 'Passwords do not match.',
-      }));
-    }
+    if (validateForm()) {
+      const existingMembers = JSON.parse(localStorage.getItem('userData')) || [];
 
-    // If no errors, proceed to submit
-    if (!errors.password && !errors.confirmPassword) {
+      const emailExists = existingMembers.some(
+        member => member.email.toLowerCase() === formValues.email.toLowerCase()
+      );
+
+      if (emailExists) {
+        alert('Email already exists. Please use a different email.');
+        return;
+      }
+
       const newMember = {
         ...formValues,
         id: uuidv4(),
       };
-      setMembers([...members, newMember]);
-    // Save to local storage
-    // Retrieve existing members from local storage
-    const existingMembers = JSON.parse(localStorage.getItem('userData')) || [];
-    existingMembers.push(newMember); // Add new member to the list
 
-    // Save updated members back to local storage
-    localStorage.setItem('userData', JSON.stringify(existingMembers));
-    alert('User signed up!');
+      existingMembers.push(newMember);
+      localStorage.setItem('userData', JSON.stringify(existingMembers));
+      alert('User signed up!');
 
-      // Reset the form
+      navigate('/LogIn'); // Redirect to login page after successful registration
+
       setFormValues({
         firstName: '',
         lastName: '',
@@ -187,22 +178,9 @@ const SignUpForm = () => {
           </div>
 
           <button type="submit" className="btn btn-dark mt-4 text-xl">
-            Create Account <FontAwesomeIcon icon={faArrowRight} className="h-6" />
+            Create Account <FontAwesomeIcon icon={faArrowRight} className="h-4" />
           </button>
         </form>
-        <div className='text-center my-4'>
-              ----------------------Sign in with ----------------------
-              <div className='d-flex justify-between my-3 w-[500px]'>
-                <button className='btn btn-light'><img src="./public/1.png" alt="" className='' /></button>
-                <button className='btn btn-light mx-5'><img src="./public/2.png" alt="" className='' /></button>
-                <button className='btn btn-light'><img src="./public/3.png" alt="" className='' /></button>
-              </div>
-
-            </div>
-      </div>
-
-      <div className="col-6 col-md-4 p-0">
-        <img src="./public/signup.png" alt="Sign Up" className="h-[900px] text-end" />
       </div>
     </div>
   );

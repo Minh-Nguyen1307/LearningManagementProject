@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCartShopping, faBell, faHeart } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,6 +8,7 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const dropdownRef = useRef(null); // Create a ref for the dropdown
+  const navigate = useNavigate(); // Initialize navigate
 
   useEffect(() => {
     // Retrieve the logged-in user's data from localStorage
@@ -26,6 +27,7 @@ const Header = () => {
     localStorage.removeItem('loggedInUser'); // Clear user data from localStorage
     setIsLoggedIn(false); // Update state
     setDropdownVisible(false); // Close dropdown
+    navigate('/'); // Redirect to home page
   };
 
   const handleClickOutside = (event) => {
@@ -75,10 +77,10 @@ const Header = () => {
 
             {/* Dropdown Menu */}
             {dropdownVisible && (
-              <div ref={dropdownRef} className="absolute left-32 mt-44 bg-white border border-gray-300 shadow-lg rounded-lg z-50 text-lg">
-                <Link to="/information" className="block px-4 py-2 text-black hover:bg-gray-100">Information</Link>
+              <div ref={dropdownRef} className="absolute w-32 left-32 mt-44 bg-white border border-gray-300 shadow-lg rounded-lg z-50 text-lg">
+                <Link to="/Profile" className="block text-center px-2 py-2 text-black hover:bg-gray-100">Profile</Link>
                 <hr />
-                <button onClick={handleSignOut} className="block w-full text-left px-4 py-2 text-black hover:bg-gray-100">Sign Out</button>
+                <button onClick={handleSignOut} className="w-full block text-center px-2 py-2 text-black hover:bg-gray-100">Sign Out</button>
               </div>
             )}
           </div>
