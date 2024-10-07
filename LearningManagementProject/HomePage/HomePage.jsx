@@ -23,6 +23,8 @@ export default function HomePage() {
         <HomeComments />
         <HomeBanner />
         <Footer />
+        
+
     </div>
   )
 }
