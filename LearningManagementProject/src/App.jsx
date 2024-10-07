@@ -7,7 +7,9 @@ import SignUpPage from '../SignUpPage/SignUpPage';
 import LoginPage from '../LogInPage/LoginPage';
 import ProfilePage from '../ProfilePage/ProfilePage';
 import CoursesPage from '../CoursesPage/CoursesPage';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+
+
 
 
 

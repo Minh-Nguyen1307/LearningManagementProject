@@ -54,7 +54,7 @@ const Header = () => {
           <Link to="/"><img src="./public/BYWAY1.png" alt="logoByway" className='w-32' /></Link>
         </div>
         <div>
-          <Link to="/">Categories</Link>
+          <Link to="/Courses">Categories</Link>
         </div>
         <form className='border border-black w-2/5 h-1/2 rounded-lg d-flex justify-start '>
           <button type='submit'><FontAwesomeIcon icon={faMagnifyingGlass} className='ml-2' /></button>
