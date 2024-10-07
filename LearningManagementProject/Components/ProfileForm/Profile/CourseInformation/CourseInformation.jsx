@@ -31,7 +31,7 @@ const CourseInformation = () => {
                     <p className='text-xs'>Sort By</p>
                     <div className="dropdown">
                         <button className="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            
+                            Relevance
                         </button>
                         <ul className="dropdown-menu text-center w-full">
                             <li className="btn btn-light w-full" >Author</li>

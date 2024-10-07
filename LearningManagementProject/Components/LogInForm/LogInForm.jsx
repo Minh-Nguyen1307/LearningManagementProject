@@ -79,7 +79,7 @@ const LogInForm = () => {
           </button>
         </form>
         <div className='text-center my-4'>
-          ----------------------Sign in with ----------------------
+          ----------------------Log in with ----------------------
           <div className='d-flex justify-between my-3 w-[500px]'>
             <button className='btn btn-light'><img src="./public/1.png" alt="" className='' /></button>
             <button className='btn btn-light mx-5'><img src="./public/2.png" alt="" className='' /></button>

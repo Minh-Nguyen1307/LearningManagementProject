@@ -36,6 +36,7 @@ const course = [{
     cost:'$149.9',
 }
 ];
+
 const HomeCourses = () => {
     const [homeCourses, setHomeCourses] = useState(course);
   return (

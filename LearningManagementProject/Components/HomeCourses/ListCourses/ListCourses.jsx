@@ -16,7 +16,7 @@ const ListCourses = (props) => {
   return (
     <div >
         <h4 className='text-4xl font-semibold text-gray-800 mx-10 mt-5'>Top Courses</h4>
-        <Link to = "/" className='text-blue-800 d-flex justify-end m-10'>See all</Link>
+        <Link to = "/Courses" className='text-blue-800 d-flex justify-end m-10'>See all</Link>
         <div className="d-flex items-center justify-between mx-10 h-[500px] ">
           {listCourses}
         </div>
